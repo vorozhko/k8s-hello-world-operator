@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: hello-world-operator
+  namespace: default
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: hello-world-operator-role
+  namespace: default
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - example.com
+    resources:
+      - helloworlds
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+      - delete
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: hello-world-operator-rolebinding
+  namespace: default
+subjects:
+  - kind: ServiceAccount
+    name: hello-world-operator
+    namespace: default
+roleRef:
+  kind: Role
+  name: hello-world-operator-role
+  apiGroup: rbac.authorization.k8s.io

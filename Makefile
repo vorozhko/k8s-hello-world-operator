@@ -1,5 +1,7 @@
 # Makefile for Hello World Kubernetes Operator
 
+.PHONY: build run deploy clean test help
+
 # Build the operator
 build:
 	go build -o bin/hello-world-operator ./cmd
@@ -10,9 +12,7 @@ run: build
 
 # Deploy the operator to the Kubernetes cluster
 deploy:
-	kubectl apply -f config/crd/bases/example.com_helloworlds.yaml
-	kubectl apply -k config/default
-	kubectl apply -k config/manager
+	kubectl apply -f deploy
 
 # Clean up the build artifacts
 clean:

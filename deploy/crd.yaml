@@ -24,14 +24,3 @@ spec:
                 message:
                   type: string
                   description: "The message to be displayed by the HelloWorld resource."
-  validation:
-    openAPIV3Schema:
-      type: object
-      properties:
-        spec:
-          type: object
-          properties:
-            message:
-              type: string
-              minLength: 1
-              description: "The message to be displayed by the HelloWorld resource."
