@@ -1,0 +1,5 @@
+resources:
+  - ../../crd/bases/example.com_helloworlds.yaml
+  - ../../rbac
+  - ../../manager
+  - ../../controllers/helloworld_controller.go

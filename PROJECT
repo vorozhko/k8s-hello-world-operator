@@ -1,0 +1,15 @@
+name: hello-world-operator
+version: 0.1.0
+description: A simple Hello World Kubernetes operator
+maintainers:
+  - name: Iaroslav Vorozhko
+    email: your.email@example.com
+keywords:
+  - kubernetes
+  - operator
+  - hello-world
+license: Apache-2.0
+repository: https://github.com/yourusername/hello-world-operator
+dependencies:
+  - controller-runtime: v0.9.0
+  - kubernetes: v1.21.0

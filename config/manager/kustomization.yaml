@@ -1,0 +1,13 @@
+resources:
+  - manager.yaml
+  - role.yaml
+  - role_binding.yaml
+  - service_account.yaml
+  - crd.yaml
+  - deployment.yaml
+  - service.yaml
+
+images:
+  - name: hello-world-operator
+    newName: vorozhko/hello-world-k8s-operator
+    newTag: latest

@@ -1,0 +1,53 @@
+# Logs
+*.log
+*.out
+*.err
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# Kubernetes config
+*.kubeconfig
+*.kube/
+
+# Helm files
+*.tgz
+charts/
+releases/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.swp
+*.tmp
+*.bak
+*.orig
+*.DS_Store
+
+# Operator SDK generated files
+bin/
+config/generated/
+manifests/
+testbin/
+
+# Go build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.o
+
+# IDE specific files
+.idea/
+.vscode/
+*.iml
