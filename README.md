@@ -29,7 +29,7 @@ To build and run the operator, follow these steps:
    cd hello-world-operator
    ```
 
-2. **Build the operator**:
+2. **Build the operator(Optional)**:
    ```
    make build
    ```
@@ -41,6 +41,12 @@ To build and run the operator, follow these steps:
 
 4. **Interact with the HelloWorld resource**:
    You can create, update, and delete HelloWorld resources using `kubectl`.
+   ```
+   kubectl apply -f example/helloworld.example.yaml
+   kubectl get helloworlds.example.com
+   NAME                AGE
+   helloworld-sample   3m33s
+   ```
 
 ## License
 
